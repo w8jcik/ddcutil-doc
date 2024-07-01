@@ -1,0 +1,135 @@
+# site_name becomes <title> of main index page
+site_name: ddcutil Documentation
+repo_url: https://github.com/rockowitz/ddcutil
+# site_url shown in headers
+site_url: https://www.ddcutil.com
+# site_description, site_author become description and author meta tags of main index page
+site_description: ddcutil (formerly ddctool) is a Linux utility for reading and changing monitor settings such as brightness and color levels.  
+  ddcutil primarily uses DDC/CI (Display Data Channel Command Interface) to communicate with monitors implementing MCCS (Monitor Control Command Set)  
+  over I2C.  Alternatively, there is support for monitors (such as Eizo Coloredge) that implement MCCS using a USB connection.
+site_author: Sanford Rockowitz
+# additional project information values not yet defined:
+#   site_url, repo_name, site_favicon, copyright, google_analytics, remote_branch, remote_name
+# default theme: mkdocs, alt themes: readthedocs, bootstrap?, nature?
+theme:
+  name: readthedocs
+  naigation_depth: 3
+  # applies to mkdocs, not readthedocs:  nav_style: dark
+  sticky_navigation: False
+markdown_extensions:
+  - fenced_code
+nav:
+- Introduction: 'index.md'
+- Command Overview: 'commands.md'
+- Command Examples:
+    - Command Examples: 'cmd_output.md'
+    - ddcutil detect example: 'detect_verbose_output.md'
+    - ddcutil getvcp example: 'getvcp_known_u3011_output.md'
+    - ddcutil vcpinfo example: 'vcpinfo_output.md'
+    - ddcutil capabilities example: 'cap_u3011_verbose_output.md'
+- Command Detail:
+    - Command Detail: 'command_detail.md'
+    - Primary Commands: 'primary_commands.md'
+    - Primary Commands: 
+        - detect: 'command_detect.md' 
+        - capabilities: 'command_capabilities.md'
+        - getvcp: 'command_getvcp.md'
+        - setvcp: 'command_setvcp.md'
+        - vcpinfo: 'command_vcpinfo.md'
+        - dumpvcp &amp; loadvcp: 'command_dumpvcp_loadvcp.md'
+        - scs: 'command_scs.md'
+    - Secondary Commands: 'secondary_commands.md'
+    - Command Options: 'options_main.md'
+    - Command Options:
+        - Display Detection: 'display_detection.md'
+        - Display Selection: 'display_selection.md'
+        - Feature Selection: 'feature_selection.md'
+        - Performance and Tuning Options: 'performance_options.md'
+        - Instrumentation Options: "instrumentation_options.md"
+        - Output Level Options: 'output_control_options.md'
+        - Miscellaneous Options: 'other_options.md'
+        - i2c-dev Driver Options: 'i2c_dev_options.md'
+        - Debugging Options: 'debug_options.md'
+        - Deprecated Options: 'deprecated_options.md'
+    - Shared Library Options: 'libddcutil_options.md'
+- Specific Facilities:
+    - Table Type Features: 'table_features.md'
+    - USB Connected Monitors: 'usb.md'
+    - Color Management: 'colormgt.md'
+    - User Defined Features: 'udf.md'
+    - Configuration File: 'config_file.md'
+- Installation and Configuration:
+    - Installation and Configuration: "install_config_main.md"
+    - Post-Installation Checklist: "config_steps.md"
+    - Install ddcutil From Prebuilt Packages: 'install.md'
+    - Building From Source: 'building.md'
+    - Shared Library Configuration: 'shared_lib_config.md'
+    - Notes for Linux Distribution Maintainers: 'mult_shared_libs.md'
+    - Configuration and Installation Diagnostics: 'config.md'
+    - I2C Device Permissions: 'i2c_permissions.md'
+    - USB Device Permissions: 'usb_permissions.md'
+    - Kernel Module Configuration: 'kernel_module.md'
+    - Special Nvidia Driver Settings: 'nvidia.md'
+    - Setting Nvidia Driver Options Using X11: 'nvidia_old.md'
+    - Notes on driver amdgpu: 'amdgpu.md'
+    - Virtual Machines: 'virtual_machines.md'
+    - Raspberry Pi: 'raspberry.md'
+    - Notes on Specific Monitors: 'monitor_notes.md'
+    - Notes on Particular Configurations: "quirks.md"
+    - USB-C DisplayPort Alt Mode: "typec.md"
+
+- Shared Library:
+    - C API: 'api_main.md'
+    - Shared Library Release Notes: 'libddcutil_release_notes.md'
+    - Shared Library Changes for Release 0.9.0: 'c_api_90.md'
+    - Shared Library Changes for Release 0.9.3: 'c_api_93.md'
+    - Shared Library Changes for Release 0.9.5: 'c_api_95.md'
+    - Shared Library Changes for Release 0.9.6: 'c_api_96.md'
+    - Shared Library Changes for Release 0.9.8: 'c_api_98.md'
+    - Shared Library Changes for Release 0.9.9: 'c_api_99.md'
+    - Shared Library Changes for Release 1.0.0: 'c_api_100.md'
+    - Shared Library Changes for Release 1.1.0: 'c_api_110.md'
+    - Shared Library Changes for Release 1.2.0: 'c_api_120.md'
+    - Shared Library Changes for Release 1.3.0: 'c_api_130.md'
+    - Shared Library Changes for Release 1.4.0: 'c_api_140.md'
+    - Shared Library Changes for Release 2.0.0: 'c_api_200.md'
+    - Shared Library Changes for Release 2.1.0: 'c_api_210.md'
+    - Shared Library Changes for Release 2.1.2: 'c_api_212.md'
+    - Shared Library Changes for Release 2.1.3: 'c_api_213.md'
+    - Shared Library Changes for Release 2.1.4: 'c_api_214.md'
+
+- Background:
+    - Monitor Control Command Set: 'mccs_background.md'
+    - DDC vs I2C: 'ddc_vs_i2c.md'
+    - DDC and DisplayPort: "displayport.md"
+    - References: 'bibliography.md'
+    - Developer Documentation: 'devdoc.md'
+
+- Additional Topics:
+    - Articles about ddcutil: 'articles.md'
+    - Frequently Asked Questions: "faq.md"
+    - Technical Support: 'tech_support.md'
+    - Comparison with ddccontrol: 'ddccontrol.md' 
+    - DDC Null Message: 'ddc_null_response.md'
+    - Reverse Engineering Proprietary DDC Extensions: 'sniffing.md'
+    - Acknowledgements: 'acknowledgements.md'
+    - Technical Notes: 'technotes.md'
+    - Driver Bug Reports of Interest: 'driver_bug_reports.md'
+
+- Release History:
+    - Releases: 'releases.md'
+    - Release Notes: "release_notes.md"
+    - Announcement History: "prior_announcements.md"
+
+- ddcui:
+    - Overview: 'ddcui_main.md'
+    - Command Line Options: 'ddcui_options.md'
+    - Building ddcui: 'building_ddcui.md'
+    - ddcui Release Notes: 'ddcui_release_notes.md'
+    - ddcui Frequently Asked Questions: 'ddcui_faq.md'
+
+- Related Resources:
+    - Monitor Specifications: 'monitor_resources.md'
+    - Windows Utilities for Monitor Control: 'windows_programs.md'
+    - Macintosh Utlities for Monitor Control: 'mac_programs.md'
+    - Applications using ddcutil: 'ddcutil_usage.md'

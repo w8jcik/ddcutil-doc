@@ -1,0 +1,15 @@
+## Installation and Configuration
+
+- [Post-Installation Checklist](config_steps_md)
+- [Install ddcutil From Pre-Built Packages](install.md)
+- [Building From Source](building.md)
+- [Shared Library Configuration](shared_lib_config.md)
+- [Configuration and Installation Diagnostics](config.md)
+- [I2C Device Permissions](i2c_permissions.md)
+- [USB Device Permissions](usb_permissions.md)
+- [Kernel Module Configuration](kernel_module.md)
+- [Special Nvidia Driver Settings](nvidia.md)
+- [Virtual Machines](virtual_machines.md)
+- [Raspberry Pi](raspberry.md)
+- [Notes on Specific Monitors](monitor_notes.md)
+- [Notes on Particular Configurations](quirks.md)
